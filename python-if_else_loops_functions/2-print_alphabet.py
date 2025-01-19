@@ -2,5 +2,5 @@
 i = 97
 ascci = chr (i)
 while i <= 122:
-    print(chr(i))
+    print(f"chr(i)")
     i += 1
