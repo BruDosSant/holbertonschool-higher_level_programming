@@ -1,14 +1,16 @@
->>> add_integer(1, 2)
+>>> import imp
+>>> add_integer = imp.load_source('add_integer', './0-add_integer.py')
+>>> add_integer.add_integer(1, 2)
 3
->>> add_integer(5)
+>>> add_integer.add_integer(5)
 103
->>> add_integer(4.5, 2.5)
+>>> add_integer.add_integer(4.5, 2.5)
 7
->>> add_integer(10, "20")
+>>> add_integer.add_integer(10, "20")
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
->>> add_integer("5", 2)
+>>> add_integer.add_integer("5", 2)
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer

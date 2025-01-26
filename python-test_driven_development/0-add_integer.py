@@ -12,22 +12,22 @@ Function:
 
 def add_integer(a, b=98):
     """
-    Adds two integers or floats.
-
+    Adds two integers or floats. If a float is provided, it will be cast to an integer.
+    If the inputs are not integers or floats, a TypeError will be raised.
+    
     Args:
-        a (int or float): The first integer or float.
-        b (int or float, optional): The second integer or float. Defaults to 98.
-
+        a (int or float): The first number.
+        b (int or float): The second number (default is 98).
+    
     Returns:
-        int: The sum of the two arguments, casted to an integer.
-
+        int: The sum of the two numbers as an integer.
+    
     Raises:
-        TypeError: If either a or b is not an integer or float.
-
+        TypeError: If either a or b are not integers or floats.
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-
+    
     return int(a) + int(b)
