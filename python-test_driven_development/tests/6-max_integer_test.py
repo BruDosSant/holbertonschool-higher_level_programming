@@ -25,5 +25,9 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_integer_with_large_numbers(self):
         self.assertEqual(max_integer([1000000, 2000000, 500000]), 2000000)
 
+    def test_max_at_the_end(self):
+    """Test for 'max at the end'."""
+    self.assertEqual(max_integer([1, 2, 3, 4, 5]), 5)
+
 if __name__ == '__main__':
     unittest.main()
