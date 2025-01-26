@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Este es un módulo que contiene una función para sumar d"""
 
+
 def matrix_divided(matrix, div):
     """
     Divides all elements of a matrix by a given divisor.
@@ -10,7 +11,7 @@ def matrix_divided(matrix, div):
         div (int or float): The number by which the m
 
     Returns:
-        list of lists: A new matrix where each element 
+        list of lists: A new matrix where each element
 
     Raises:
         TypeError: If matrix is not a list of lists of integers or floats.
@@ -19,7 +20,7 @@ def matrix_divided(matrix, div):
         ZeroDivisionError: If div is 0.
     """
     if not isinstance(matrix, list) or not all(
-        isinstance(row, list) for row in matrix):
+            isinstance(row, list) for row in matrix):
             raise TypeError("matrix must be a matrix (list of lists) "
                       "of integers/floats")
 
