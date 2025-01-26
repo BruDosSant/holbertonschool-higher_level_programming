@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Este es un módulo que contiene una función para sumar d."""
+"""Este es un módulo que contiene una función para sumar d"""
 
 
 def add_integer(a, b=98):
-    """Suma dos números enteros y devuelve el resultado."""
+    """Suma dos números enteros y devuelve el resultado"""
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
 
