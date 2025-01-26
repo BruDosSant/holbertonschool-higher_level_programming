@@ -8,7 +8,7 @@ def list_division(my_list_1, my_list_2, list_length):
                 result.append(0)
             else:
                 if isinstance(my_list_1[i], (int, float)) and \
-                    isinstance(my_list_2[i], (int, float)):
+                        isinstance(my_list_2[i], (int, float)):
 
                     try:
                         result.append(my_list_1[i] / my_list_2[i])
