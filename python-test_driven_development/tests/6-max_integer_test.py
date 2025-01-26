@@ -2,51 +2,63 @@
 """Unittest for max_integer([..])
 """
 import unittest
-from max_integer import max_integer
+max_integer = __import__('6-max_integer').max_integer
+
 
 class TestMaxInteger(unittest.TestCase):
-    """Test cases for the max_integer function."""
-    
+
+    """Suite test for max_integer function"""
+
     def test_max_integer(self):
-        """Test with a list of integers."""
-        self.assertEqual(max_integer([6, 9, 23, 47]), 47)
+        self.assertEqual(max_integer([5, -2, 100, 3]), 100)
 
-    def test_max_at_the_end(self):
-        """Test max at the end."""
-        self.assertEqual(max_integer([1, 3, 5, 2, 7]), 7)
+    def test_empty_list(self):
+        self.assertEqual(max_integer([]), None)
 
-    def test_max_integer_negative(self):
-        """Test with a list containing negative integers."""
-        self.assertEqual(max_integer([-10, -2, -3, -4]), -2)
-    
-    def test_max_integer_single_element(self):
-        """Test with a list containing a single integer."""
-        self.assertEqual(max_integer([27]), 27)
-    
-    def test_max_integer_empty(self):
-        """Test with an empty list."""
-        self.assertIsNone(max_integer([]))
-    
-    def test_max_integer_duplicates(self):
-        """Test with a list containing duplicate maximum values."""
-        self.assertEqual(max_integer([1, 2, 3, 5, 5, 4]), 5)
-    
-    def test_max_integer_type_error(self):
-        """Test with a list of mixed types (should raise TypeError)."""
+    def test_repeated_number(self):
+        self.assertEqual(max_integer([1000, 1000, 1000]), 1000)
+
+    def test_float_numbers(self):
+        self.assertEqual(max_integer([50, 51, 50, 49]), 51)
+
+    def test_max_operated_integer(self):
+        self.assertEqual(max_integer([-3, -5 * -5, 12, -1]), 25)
+
+    def test_neg_numbers(self):
+        self.assertEqual(max_integer([-10, -5, -2, -1]), -1)
+
+    def test_max_at_beginning(self):
+        self.assertEqual(max_integer([5, 4, 3, 2, 1]), 5)
+
+    def test_zero_number(self):
+        self.assertEqual(max_integer([0, 0]), 0)
+
+    def test_big_list(self):
+        self.assertEqual(max_integer([
+            901, 902, 903, 904, 905, 906, 907, 908, 909, 910,
+            911, 912, 913, 914, 915, 916, 917, 918, 919, 920,
+            919, 918, 917, 1000, 915, 914, 913, 912, 911, 910,
+            909, 908, 907, 906, 905, 904, 903, 902, 901]), 1000)
+
+    def test_list_with_loop(self):
+        my_list = [1, 2, 3, 4, 5]
+        self.assertEqual(max_integer([i * 5 for i in my_list]), 25)
+
+    def test_one_number_in_a_list(self):
+        self.assertEqual(max_integer([1]), 1)
+
+    def test_string_number_in_a_list(self):
         with self.assertRaises(TypeError):
-            max_integer([2, 'c', 4])
+            max_integer([0, '1'])
 
-    def test_max_at_the_end(self):
-        """Test with max end."""
-        self.assertEqual(max_integer([1, 3, 5, 2, 7]), 7)
+    def test_tuple_in_a_list(self):
+        with self.assertRaises(TypeError):
+            max_integer([10, (20, 30)])
 
-    def test_max_integer_at_the_beginning(self):
-        """Test with a list beginning ."""
-        self.assertEqual(max_integer([8, 3, 5, 2, 1]), 8)
+    def test_dictionary(self):
+        with self.assertRaises(KeyError):
+            max_integer({'key1': 1, 'key2': 2})
 
-    def test_max_integer_at_the_middle(self):
-        """Test with a list middle ."""
-        self.assertEqual(max_integer([8, 3, 9, 2, 1]), 9)
-
-if __name__ == "__main__":
-    unittest.main()
+    def test_number(self):
+        with self.assertRaises(TypeError):
+            max_integer(1)
