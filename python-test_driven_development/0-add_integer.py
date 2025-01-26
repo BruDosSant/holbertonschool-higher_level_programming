@@ -30,6 +30,10 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
     
+    MAX_VALUE = 10**6
+    if abs(a) > MAX_VALUE or abs(b) > MAX_VALUE:
+        raise OverflowError("Input values are too large")
+    
     a = int(a)
     b = int(b)
     
