@@ -1,28 +1,32 @@
 #!/usr/bin/python3
-"""Este es un módulo que contiene una función para sumar d"""
+"""
+Module: 5-text_indentation.py
 
 
+"""
 def text_indentation(text):
     """
-    Prints a text with 2 new lines after each of these characters: ., ? and :.
-
+    Prints text with 2 new lines after each '.', '?', and ':'.
+    
     Args:
-        text (str): The text to print.
-
+        text (str): The text to process.
+        
     Raises:
-        TypeError: If text is not a string.
+        TypeError: If `text` is not a string.
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
+    text = text.strip()
+    length = len(text)
     i = 0
-    while i < len(text):
+
+    while i < length:
+        print(text[i], end="")
         if text[i] in {'.', '?', ':'}:
-            print(text[i])
-            print()
-            i += 1
-            while i < len(text) and text[i] == " ":
+            print("\n")
+            while i + 1 < length and text[i + 1] == ' ':
                 i += 1
-        else:
-            print(text[i], end="")
-            i += 1
+                if i + 1 < length and text[i + 1] not in {'.', '?', ':'}:
+                    print("\n", end="")
+        i += 1
