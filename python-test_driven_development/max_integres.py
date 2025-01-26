@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""Unittest for max_integer([..])
+"""
+    Unittest for max_integer([..])
 """
 
 
 def max_integer(lst=[]):
-    """return max
+    """
+        return max
         If the list is empty, the function returns None
     """
     
