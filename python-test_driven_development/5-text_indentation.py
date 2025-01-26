@@ -1,34 +1,36 @@
 #!/usr/bin/python3
 """
-Module: 3-say_my_name
 
-Write a function that prints a text with 2 new lines 
-after each of these characters: ., ? and :
+Module composed by a function that prints 2 new lines after ".?:" characters
+
 """
 
+
 def text_indentation(text):
-    """
-    Prints text with 2 new lines after each '.', '?', and ':'.
+    """ Function that prints 2 new lines after ".?:" characters
 
     Args:
-        text (str): The text to process.
+        text: input string
+
+    Returns:
+        No return
 
     Raises:
-        TypeError: If `text` is not a string.
+        TypeError: If text is not a string
+
+
     """
-    if not isinstance(text, str):
+
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
-    i = 0
-    length = len(text)
+    s = text[:]
 
-    while i < length:
-        print(text[i], end="")
+    for d in ".?:":
+        list_text = s.split(d)
+        s = ""
+        for i in list_text:
+            i = i.strip(" ")
+            s = i + d if s is "" else s + "\n\n" + i + d
 
-        if text[i] in {'.', '?', ':'}:
-            print("\n", end="")
-            # Skip any spaces after the punctuation
-            while i + 1 < length and text[i + 1] == ' ':
-                i += 1
-
-        i += 1
+    print(s[:-3], end="")
