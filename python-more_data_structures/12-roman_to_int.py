@@ -13,14 +13,21 @@ def roman_to_int(roman_string):
 
     # Iteramos a través de la cadena
     for i in range(length):
-        current_value = roman_dict[roman_string[i]]  # Valor actual del símbolo
-        if i + 1 < length:  # Si no estamos en el último símbolo
-            next_value = roman_dict[roman_string[i + 1]]  # Valor del siguiente símbolo
-            if current_value < next_value:  # Si el valor actual es menor que el siguiente
-                total -= current_value  # Restamos el valor actual
+        current_value = roman_dict[roman_string[i]]
+        # Valor actual del símbolo
+        if i + 1 < length:
+            # Si no estamos en el último símbolo
+            next_value = roman_dict[roman_string[i + 1]]
+            # Valor del siguiente símbolo
+            if current_value < next_value:
+                # Si el valor actual es menor que el siguiente
+                total -= current_value
+                # Restamos el valor actual
             else:
-                total += current_value  # Si no, sumamos el valor actual
+                total += current_value
+                # Si no, sumamos el valor actual
         else:
-            total += current_value  # Para el último símbolo, siempre lo sumamos
+            total += current_value
+            # Para el último símbolo, siempre lo sumamos
 
     return total
