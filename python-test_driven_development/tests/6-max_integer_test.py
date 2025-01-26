@@ -1,6 +1,5 @@
-#!/usr/bin/python3
 import unittest
-from max_integer import max_integer
+from max_integer import max_integer  # Asegúrate de que max_integer está correctamente importada
 
 class TestMaxInteger(unittest.TestCase):
 
@@ -26,8 +25,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1000000, 2000000, 500000]), 2000000)
 
     def test_max_at_the_end(self):
-    """Test for 'max at the end'."""
-    self.assertEqual(max_integer([1, 2, 3, 4, 5]), 5)
+        """Test for 'max at the end'."""
+        self.assertEqual(max_integer([1, 2, 3, 4, 5]), 5)
 
 if __name__ == '__main__':
     unittest.main()
