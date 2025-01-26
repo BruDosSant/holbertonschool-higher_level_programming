@@ -1,6 +1,19 @@
 #!/usr/bin/python3
-def max_integer(list=[]):
-    """Function to return the max integer from a list."""
-    if len(list) == 0:
+"""Unittest for max_integer([..])
+"""
+
+
+def max_integer(lst=[]):
+    """return max
+        If the list is empty, the function returns None
+    """
+    
+    if len(lst) == 0:
         return None
-    return max(list)
+    
+    maxi = lst[0]
+    for i in lst[1:]:
+        if i > maxi:
+            maxi = i
+    
+    return maxi
