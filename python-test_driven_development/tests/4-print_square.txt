@@ -12,7 +12,7 @@
 ###
 
 >>> print_square(0)
-# (No output, since the size is 0)
+
 
 >>> print_square(-2)
 Traceback (most recent call last):

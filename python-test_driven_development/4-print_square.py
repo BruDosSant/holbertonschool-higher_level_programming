@@ -23,7 +23,7 @@ def print_square(size):
         raise ValueError("size must be >= 0")
 
     if size == 0:
-        return ""
+        return
 
     for i in range(size):
         print('#' * size)
