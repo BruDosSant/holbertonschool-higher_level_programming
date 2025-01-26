@@ -5,11 +5,11 @@
 def say_my_name(first_name, last_name=""):
     """
     Prints 'My name is <first_name> <last_name>'.
-    
+
     Args:
         first_name (str): The first name.
         last_name (str): The last name (default is an empty string).
-    
+
     Raises:
         TypeError: If either first_name or last_name is not a string.
     """
