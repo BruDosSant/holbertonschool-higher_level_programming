@@ -1,0 +1,35 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hello. How are you? I am fine: thank you.")
+Hello.
+
+How are you?
+
+I am fine:
+
+thank you.
+
+>>> text_indentation("What time is it? 3:00 PM. It's late.")
+What time is it?
+
+3:00 PM.
+
+It's late.
+
+>>> text_indentation("Hello there! How are you?")
+Hello there!
+
+How are you?
+
+>>> text_indentation("The weather is nice today: sunny and warm.")
+The weather is nice today:
+
+sunny and warm.
+
+>>> text_indentation("Good morning. How's it going?")
+Good morning.
+
+How's it going?
+
+>>> text_indentation("Hello.")
+Hello.
