@@ -12,7 +12,7 @@ Function:
 
 def add_integer(a, b=98):
     """
-    Adds two integers or floats. If a float is provided, it will be rounded to the nearest integer.
+    Adds two integers or floats. If a float is provided, it will be converted to an integer.
     If the inputs are not integers or floats, a TypeError will be raised.
     
     Args:
@@ -30,7 +30,7 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
     
-    a = round(a)
-    b = round(b)
+    a = int(a)
+    b = int(b)
     
     return a + b
