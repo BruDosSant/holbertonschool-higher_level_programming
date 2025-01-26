@@ -1,35 +1,25 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation("Hello. How are you? I am fine: thank you.")
+>>> print(capture_output("Hello. what is this? these is chese."))
 Hello.
 
-How are you?
+what is this?
 
-I am fine:
+these is chese.
 
-thank you.
+>>> print(capture_output("the. cat: is under?"))
+the.
 
->>> text_indentation("What time is it? 3:00 PM. It's late.")
-What time is it?
+cat:
 
-3:00 PM.
+is under?
 
-It's late.
+>>> print(capture_output("No punctuation here"))
+No punctuation here
 
->>> text_indentation("Hello there! How are you?")
-Hello there!
+>>> print(capture_output("Mixed punctuation. Followed by more punctuation? And another:"))
+Mixed punctuation.
 
-How are you?
+Followed by more punctuation?
 
->>> text_indentation("The weather is nice today: sunny and warm.")
-The weather is nice today:
-
-sunny and warm.
-
->>> text_indentation("Good morning. How's it going?")
-Good morning.
-
-How's it going?
-
->>> text_indentation("Hello.")
-Hello.
+And another:
