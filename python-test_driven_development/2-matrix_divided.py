@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Este es un módulo que contiene una función para sumar d"""
+
 def matrix_divided(matrix, div):
     """
     Divides all elements of a matrix by a given divisor.
