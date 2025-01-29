@@ -7,5 +7,6 @@ no se que poner es un cuadradinho
 
 
 class Square:
+"""A simple example class"""
     def __init__
-        self.__size
+        self._size
