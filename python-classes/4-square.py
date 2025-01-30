@@ -15,7 +15,7 @@ class Square:
         return self._Square__size * self._Square__size
 
     @property
-    def size(self)
+    def size(self):
         """Getter para obtener el tamaño del cuadrado."""
         return _Square__size
 
