@@ -11,9 +11,6 @@ class Square:
     def __init__(self, size=0):
         self._Square__size = size
 
-    def area(self):
-        return self._Square__size * self._Square__size
-
     @property
     def size(self):
         """Getter para obtener el tamaño del cuadrado."""
@@ -26,3 +23,6 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self._Square__size = size
+
+    def area(self):
+        return self._Square__size * self._Square__size
