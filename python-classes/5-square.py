@@ -32,6 +32,5 @@ class Square:
         if self.size == 0:
             print("")  # Imprime una línea vacía si size es 0
             return
-        
         for _ in range(self.size):  # Bucle para cada fila
             print("#" * self.size)  # Imprime una fila de caracteres '#'
