@@ -54,7 +54,7 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Retorna una representación en string del rectángulo con el carácter #."""
+        """Retorna una representación en string del rectángulo"""
         if self.__width == 0 or self.__height == 0:
             return ""
         return "\n".join("#" * self.__width for _ in range(self.__height))
