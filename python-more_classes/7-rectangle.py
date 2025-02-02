@@ -18,6 +18,7 @@ class Rectangle:
         self.height = height  # Se validará a través del setter
 
         Rectangle.number_of_instances += 1
+        print_symbol = "#"
 
     @property
     def width(self):
