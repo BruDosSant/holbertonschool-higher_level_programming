@@ -93,5 +93,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Devuelve una nueva instancia de Rectangle que representa un cuadrado."""
+        """Devuelve una nueva instancia de Rectangle, un cuadrado."""
         return cls(size, size)
