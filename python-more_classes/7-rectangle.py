@@ -65,7 +65,6 @@ class Rectangle:
         row = str(self.print_symbol) * self.__width
         return "\n".join(row for _ in range(self.__height))
 
-
     def __repr__(self):
         """Retorna una representación formal del rectángulo."""
         return f"Rectangle({self.__width}, {self.__height})"
