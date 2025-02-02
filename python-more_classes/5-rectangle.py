@@ -64,5 +64,5 @@ class Rectangle:
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-    """Mensaje cuando una instancia de Rectangle es eliminada."""
-    print("Bye rectangle...")
+        """Mensaje cuando una instancia de Rectangle es eliminada."""
+        print("Bye rectangle...")
