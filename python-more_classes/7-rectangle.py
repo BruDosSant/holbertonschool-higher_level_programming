@@ -10,6 +10,7 @@ class Rectangle:
     """Clase que define un rectángulo con ancho y alto."""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Inicializa el rectángulo con ancho y alto opcionales."""
@@ -18,7 +19,6 @@ class Rectangle:
         self.height = height  # Se validará a través del setter
 
         Rectangle.number_of_instances += 1
-        print_symbol = "#"
 
     @property
     def width(self):
