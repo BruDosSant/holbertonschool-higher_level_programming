@@ -8,9 +8,11 @@ no se que poner es un cuadradinho
 
 class Rectangle:
     """Clase que define un rectángulo con ancho y alto."""
-    
+
     def __init__(self, width=0, height=0):
         """Inicializa el rectángulo con ancho y alto opcionales."""
+
+
         self.width = width   # Se validará a través del setter
         self.height = height # Se validará a través del setter
 
