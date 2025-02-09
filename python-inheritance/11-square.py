@@ -13,7 +13,6 @@ Rectangle = __import__('9-rectangle').Rectangle
 class Square(Rectangle):
     """
     Class that defines a square, inheriting from Rectangle.
-    
     Validates the size as a positive integer and implements the area method.
     """
 
