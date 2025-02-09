@@ -1,37 +1,40 @@
-$ python3
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
+
+# Test para integer_validator()
 >>> bg.integer_validator("width", 10)
 >>> bg.integer_validator("height", 5)
->>> bg.integer_validator("width", "10")
+>>> bg.integer_validator("width", "10")  # Lanza TypeError: width must be an integer
 Traceback (most recent call last):
     ...
 TypeError: width must be an integer
->>> bg.integer_validator("height", -5)
+>>> bg.integer_validator("height", -5)  # Lanza ValueError: height must be greater than 0
 Traceback (most recent call last):
     ...
 ValueError: height must be greater than 0
->>> bg.integer_validator("width", 0)
+>>> bg.integer_validator("width", 0)  # Lanza ValueError: width must be greater than 0
 Traceback (most recent call last):
     ...
 ValueError: width must be greater than 0
+
+# Test para area()
 >>> bg.area()  # Lanza Exception: area() is not implemented
 Traceback (most recent call last):
     ...
 Exception: area() is not implemented
 
->>> bg = BaseGeometry()
+>>> bg = BaseGeometry()  # Nueva instancia de BaseGeometry
 >>> bg.integer_validator("width", 10)
 >>> bg.integer_validator("height", 5)
->>> bg.integer_validator("width", "10")
+>>> bg.integer_validator("width", "10")  # Lanza TypeError: width must be an integer
 Traceback (most recent call last):
     ...
 TypeError: width must be an integer
->>> bg.integer_validator("height", -5)
+>>> bg.integer_validator("height", -5)  # Lanza ValueError: height must be greater than 0
 Traceback (most recent call last):
     ...
 ValueError: height must be greater than 0
->>> bg.integer_validator("width", 0)
+>>> bg.integer_validator("width", 0)  # Lanza ValueError: width must be greater than 0
 Traceback (most recent call last):
     ...
 ValueError: width must be greater than 0
