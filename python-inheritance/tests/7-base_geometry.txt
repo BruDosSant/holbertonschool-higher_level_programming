@@ -19,3 +19,19 @@ ValueError: width must be greater than 0
 Traceback (most recent call last):
     ...
 Exception: area() is not implemented
+# Test para integer_validator()
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("width", 10)  # No lanza error
+>>> bg.integer_validator("height", 5)  # No lanza error
+>>> bg.integer_validator("width", "10")  # Lanza TypeError: width must be an integer
+Traceback (most recent call last):
+    ...
+TypeError: width must be an integer
+>>> bg.integer_validator("height", -5)  # Lanza ValueError: height must be greater than 0
+Traceback (most recent call last):
+    ...
+ValueError: height must be greater than 0
+>>> bg.integer_validator("width", 0)  # Lanza ValueError: width must be greater than 0
+Traceback (most recent call last):
+    ...
+ValueError: width must be greater than 0
