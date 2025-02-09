@@ -63,11 +63,5 @@ class Rectangle(Shape):
         return 2 * (self.width + self.height)
 
 def shape_info(shape):
-    """
-    Imprime el área y el perímetro de una forma (Shape).
-    
-    Esta función utiliza duck typing, por lo que no verifica el tipo del objeto,
-    sino que confía en que el objeto tiene los métodos 'area' y 'perimeter'.
-    """
-    print(f"Área: {area:.1f}")  # Aseguramos que se imprima con un decimal fijo
-    print(f"Perímetro: {shape.perimeter()}")
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
