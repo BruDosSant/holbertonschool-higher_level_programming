@@ -30,6 +30,8 @@ class Circle(Shape):
     
     def __init__(self, radius):
         if radius < 0:
+            self.radius = abs(radius)
+        else:
             self.radius = radius
     
     def area(self):
