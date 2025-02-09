@@ -5,7 +5,7 @@ Clase BaseGeometry con los métodos area() y integer_validator().
 
 
 class BaseGeometry:
-    """Clase base para geometría, con métodos para área y validación de enteros."""
+    """Clase base para geometría con métodos para área y validación de int."""
 
     def area(self):
         """Lanza una excepción indicando que el área no está implementada."""
