@@ -5,6 +5,6 @@ clase especificada, de lo contrario, devuelve False.
 """
 
 
-def is_same_class(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """Verifica si obj es exactamente una instancia de a_class."""
     return isinstance(obj, a_class)
