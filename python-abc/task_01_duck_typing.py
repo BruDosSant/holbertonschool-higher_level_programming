@@ -69,5 +69,5 @@ def shape_info(shape):
     Esta función utiliza duck typing, por lo que no verifica el tipo del objeto,
     sino que confía en que el objeto tiene los métodos 'area' y 'perimeter'.
     """
-    print(f"Área: {shape.area()}")
+    print(f"Área: {round(shape.area(), 1)}")
     print(f"Perímetro: {shape.perimeter()}")
