@@ -29,9 +29,10 @@ class Circle(Shape):
     """
     
     def __init__(self, radius):
-        if radius <= 0:
-            raise ValueError("El radio no puede ser negativo")
-        self.radius = radius
+        if radius < 0:
+            self.__radius = abs(radius)
+        else:
+            self.__radius = radius
     
     def area(self):
         """Calcula el área del círculo."""
