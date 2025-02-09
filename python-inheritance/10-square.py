@@ -1,21 +1,30 @@
 #!/usr/bin/python3
-"""
-
-no se que poner es un cuadradinho
 
 """
+retun true if is of that class
 
-
-Rectangle = __import__('8-rectangle').Rectangle
+Usage:
+You can create instances of Rectangle.
+"""
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Devuelve la representación en string del rectángulo."""
+    """
+    retun true if is of that class
+
+    Usage:
+    You can create instances of Rectangle.
+    """
     def __init__(self, size):
-        """Devuelve la representación en string del rectángulo."""
-        self.integer_validator("size", size)
+
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+
+        if size <= 0:
+            raise ValueError("size must be greater than 0")
+
         self.__size = size
 
     def area(self):
-        """Devuelve la representación en string del rectángulo."""
         return self.__size ** 2
