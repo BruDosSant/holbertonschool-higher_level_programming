@@ -7,7 +7,7 @@ clase especificada, de lo contrario, devuelve False.
 
 def inherits_from(obj, a_class):
     """Verifica si obj es exactamente una instancia de a_class."""
-    if type(obj) is a_class
+    if type(obj) is a_class:
         return False
-    else
+    else:
         return True
