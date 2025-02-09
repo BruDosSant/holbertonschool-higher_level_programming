@@ -6,8 +6,9 @@ no se que poner es un cuadradinho
 """
 
 
-def print_sorted(self):
-    """Clase que define un rectángulo con ancho y alto."""
+class MyList(list):
 
-    messi = sorted(self)
-    return messi
+    def print_sorted(self):
+        """Clase que extiende list con un método para imprimir la lista ordenada"""
+
+        print(sorted(slef))
