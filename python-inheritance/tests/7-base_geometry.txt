@@ -23,6 +23,7 @@ Traceback (most recent call last):
     ...
 Exception: area() is not implemented
 
+# Verificando que las excepciones sean levantadas correctamente cuando se intentan instancias
 >>> bg = BaseGeometry()  # Nueva instancia de BaseGeometry
 >>> bg.integer_validator("width", 10)
 >>> bg.integer_validator("height", 5)
@@ -38,3 +39,7 @@ ValueError: height must be greater than 0
 Traceback (most recent call last):
     ...
 ValueError: width must be greater than 0
+>>> bg.area()  # Lanza Exception: area() is not implemented
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
