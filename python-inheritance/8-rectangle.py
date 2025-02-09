@@ -6,8 +6,6 @@ no se que poner es un cuadradinho
 """
 
 
-from 7-base_geometry import BaseGeometry
-
 class Rectangle(BaseGeometry):
     """Clase que extiende list con un método para imprimir la lista ordenada"""
     def __init__(self, width, height):
