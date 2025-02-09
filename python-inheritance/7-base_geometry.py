@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 """
-
-no se que poner es un cuadradinho
-
+Clase BaseGeometry con los métodos area() y integer_validator().
 """
 
 
 class BaseGeometry:
-    """Clase que extiende list con un método para imprimir la lista ordenada"""
+    """Clase base para geometría, con métodos para área y validación de enteros."""
+
     def area(self):
-        """Imprime la lista en orden ascendente sin modificar la original."""
+        """Lanza una excepción indicando que el área no está implementada."""
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
-        """Imprime la lista en orden ascendente sin modificar la original."""
-        if isinstance(value, int):
-            raise ValueError("<name> must be an integer")
+        """Valida si value es un número entero mayor que 0."""
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
         if value <= 0:
-            raise ValueError("<name> must be greater than 0")
+            raise ValueError(f"{name} must be greater than 0")
