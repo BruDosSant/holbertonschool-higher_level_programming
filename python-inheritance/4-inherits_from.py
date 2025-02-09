@@ -9,5 +9,6 @@ def inherits_from(obj, a_class):
     """Verifica si obj es exactamente una instancia de a_class."""
     if type(obj) is a_class:
         return False
-    else:
+    elif isinstance(obj, a_class) and type(obj) is not a_class:
         return True
+    else
