@@ -12,4 +12,4 @@ class MyList(list):
     def print_sorted(self):
         """Imprime la lista en orden ascendente sin modificar la original."""
 
-        print(sorted(slef))
+        print(sorted(self))
