@@ -1,5 +1,5 @@
 $ python3
->>> from 7-base_geometry import BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("width", 10)  # No lanza error
 >>> bg.integer_validator("height", 5)  # No lanza error
