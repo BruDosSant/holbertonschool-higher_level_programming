@@ -7,4 +7,4 @@ increible
 def read_file(filename=""):
     """epectacular"""
     with open(filename, "r") as messi:
-        print(messi.read())
+        print(messi.read(), end="")
