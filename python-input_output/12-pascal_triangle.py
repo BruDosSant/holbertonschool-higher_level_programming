@@ -5,6 +5,7 @@ increible
 
 
 def pascal_triangle(n):
+    "increible"
     if n <= 0:
         return []
 
