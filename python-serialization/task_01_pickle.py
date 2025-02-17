@@ -34,7 +34,18 @@ class CustomObject:
         """Carga y deserializa un objeto desde un archivo."""
         try:
             with open(filename, "rb") as file:
-                return pickle.load(file)
-        except (FileNotFoundError, pickle.PickleError) as e:
+                # Intentar cargar el objeto
+                obj = pickle.load(file)
+                return obj
+        except FileNotFoundError:
+            print("Error: El archivo no existe.")
+            return None
+        except EOFError:
+            print("Error: El archivo está vacío o corrupto.")
+            return None
+        except pickle.UnpicklingError:
+            print("Error: Archivo corrupto.")
+            return None
+        except Exception as e:
             print(f"Error during deserialization: {e}")
             return None
