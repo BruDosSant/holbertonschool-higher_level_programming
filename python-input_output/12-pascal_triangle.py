@@ -5,7 +5,7 @@ increible
 
 
 def pascal_triangle(n):
-    "increible"
+    """increible"""
     if n <= 0:
         return []
 
