@@ -14,11 +14,12 @@ def pascal_triangle(n):
     for i in range(1, n):
         prev_row = triangle[-1]  # Última fila generada
         new_row = [1]  # Comienza con 1
-        
-        for j in range(1, len(prev_row)):  
-            new_row.append(prev_row[j - 1] + prev_row[j])  # Suma de los de arriba
-        
+
+        for j in range(1, len(prev_row)):
+            new_row.append(prev_row[j - 1] + prev_row[j])
+            # Suma de los de arriba
+
         new_row.append(1)  # Termina con 1
         triangle.append(new_row)  # Agrega la nueva fila
-    
+
     return triangle
