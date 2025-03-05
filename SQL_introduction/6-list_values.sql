@@ -1,2 +1,2 @@
 -- Pepito grillo
-SELECT name FROM first_table;
+SELECT * FROM first_table;
