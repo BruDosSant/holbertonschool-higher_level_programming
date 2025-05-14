@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 c = 1
 for a in range(9):
-    for b in range(c,10):
+    for b in range(c, 10):
         if a == b:
             continue
         if a == 8 and b == 9:
