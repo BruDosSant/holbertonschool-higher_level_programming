@@ -2,7 +2,8 @@
 """
 Module that defines the function `text_indentation`.
 
-This function prints text with two new lines after each '.', '?' or ':' character.
+This function prints text with two new lines after each '.', '?' or ':' 
+character.
 """
 
 def text_indentation(text):
