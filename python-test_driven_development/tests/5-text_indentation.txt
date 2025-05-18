@@ -1,0 +1,25 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> print(capture_output("Hello. what is this? these is chese."))
+Hello.
+
+what is this?
+
+these is chese.
+
+>>> print(capture_output("the. cat: is under?"))
+the.
+
+cat:
+
+is under?
+
+>>> print(capture_output("No punctuation here"))
+No punctuation here
+
+>>> print(capture_output("Mixed punctuation. Followed by more punctuation? And another:"))
+Mixed punctuation.
+
+Followed by more punctuation?
+
+And another:

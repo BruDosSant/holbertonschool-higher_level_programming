@@ -1,0 +1,37 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+	Add integers correctly:
+	>>> add_integer(1, 9)
+	10
+
+	>>> add_integer(52, -2)
+	50
+
+	Test with default value for b:
+	>>> add_integer(1)
+	99
+
+	Test with float arguments:
+	>>> add_integer(29.9, -1)
+	28
+
+	Raise TypeError for invalid input:
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(9e999999, 6)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(float('nan'), 2)
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
