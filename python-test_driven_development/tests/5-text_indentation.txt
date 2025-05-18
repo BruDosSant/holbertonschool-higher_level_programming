@@ -2,16 +2,16 @@
 
 >>> text_indentation("Hello. what is this? these is chese.")
 Hello.
-
+<BLANKLINE>
 what is this?
-
+<BLANKLINE>
 these is chese.
 
 >>> text_indentation("the. cat: is under?")
 the.
-
+<BLANKLINE>
 cat:
-
+<BLANKLINE>
 is under?
 
 >>> text_indentation("No punctuation here")
@@ -19,7 +19,7 @@ No punctuation here
 
 >>> text_indentation("Mixed punctuation. Followed by more punctuation? And another:")
 Mixed punctuation.
-
+<BLANKLINE>
 Followed by more punctuation?
-
+<BLANKLINE>
 And another:
