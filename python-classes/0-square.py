@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """	
-Clase cuadradito
+Square = Clase cuadradito
 """	
 class square():
     """
