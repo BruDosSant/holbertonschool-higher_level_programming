@@ -3,3 +3,7 @@ class square():
     """
     Doc de class, no hace nada
     """
+    pass
+        """
+        pase pa
+        """
