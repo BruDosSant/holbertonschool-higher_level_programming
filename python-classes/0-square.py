@@ -6,8 +6,8 @@ It serves as a placeholder for future development.
 """
 
 
-class square():
+class Square():
     """
     Doc de class, no hace nada
     """
-        pass
+    pass
