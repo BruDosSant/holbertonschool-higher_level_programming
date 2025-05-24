@@ -1,11 +1,6 @@
 #!/usr/bin/python3
-"""	
-Square = Clase cuadradito
-"""
-
-
 class square():
     """
-    pass, no hace nada
+    Doc de class, no hace nada
     """
     pass
