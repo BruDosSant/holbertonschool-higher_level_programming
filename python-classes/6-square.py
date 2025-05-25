@@ -41,20 +41,20 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-    """
-    Print the square with the character # considering position.
-    """
-    if self.size == 0:
-        print()
-        return
+        """
+        Print the square with the character # considering position.
+        """
+        if self.size == 0:
+            print()
+            return
 
-    # Imprime líneas vacías arriba (position[1])
-    for _ in range(self.position[1]):
-        print()
+        # Imprime líneas vacías arriba (position[1])
+        for _ in range(self.position[1]):
+            print()
 
-    # Imprime el cuadrado con espacios al inicio de cada línea (position[0])
-    for _ in range(self.size):
-        print(" " * self.position[0] + "#" * self.size)
+        # Imprime el cuadrado con espacios al inicio de cada línea (position[0])
+        for _ in range(self.size):
+            print(" " * self.position[0] + "#" * self.size)
 
     @property
     def position(self):
