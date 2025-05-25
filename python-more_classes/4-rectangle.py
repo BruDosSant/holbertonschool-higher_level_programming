@@ -78,8 +78,8 @@ class Rectangle():
                 result += "\n"
         return result
 
-        def __repr__(self):
-            """
-            Returns a string that can recreate the object with eval().
-            """
-            return f"Rectangle({self.__width}, {self.__height})"
+    def __repr__(self):
+        """
+        Returns a string that can recreate the object with eval().
+        """
+        return f"Rectangle({self.__width}, {self.__height})"
