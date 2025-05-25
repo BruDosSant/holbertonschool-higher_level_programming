@@ -12,6 +12,10 @@ class Square:
         """
         inicializa el atributo size.
         """
+    def set_size(self, size):
+        """
+        Set the size
+        """
         if size is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
