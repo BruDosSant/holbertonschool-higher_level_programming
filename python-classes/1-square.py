@@ -12,4 +12,4 @@ class Square:
         """
         inicializa el atributo size.
         """
-        self.size = size
+        self.__size = size
