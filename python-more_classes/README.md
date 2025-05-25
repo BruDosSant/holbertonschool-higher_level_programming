@@ -1,0 +1,4 @@
+ls
+aaaa
+p
+t
