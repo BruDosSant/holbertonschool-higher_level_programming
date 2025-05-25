@@ -30,7 +30,7 @@ class Square:
         Get the size
         """
         return self.__size
-    def area(self):
+     def area(self):
         """
         Calculate the area of the square.
         """
