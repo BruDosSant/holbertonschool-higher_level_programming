@@ -83,3 +83,9 @@ class Rectangle():
         Returns a string that can recreate the object with eval().
         """
         return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        """
+        Prints a message when the rectangle is deleted.
+        """
+        print("Bye rectangle...")
