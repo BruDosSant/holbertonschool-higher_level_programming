@@ -6,7 +6,7 @@ It serves as a placeholder for future development.
 """
 
 
-class rectangle:
+class Rectangle():
     """
     Doc de class, no hace nada
     """
