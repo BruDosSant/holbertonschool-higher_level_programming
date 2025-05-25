@@ -12,8 +12,9 @@ class Square:
         """
         Inicializa el atributo size utilizando el setter.
         """
-        self.set_size(size)
+        self._size(size)
 
+    @setter
     def set_size(self, size):
         """
         Set the size
@@ -25,6 +26,7 @@ class Square:
         else:
             self.__size = size
 
+    @property
     def get_size(self):
         """
         Get the size
