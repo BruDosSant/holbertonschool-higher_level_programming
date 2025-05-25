@@ -52,7 +52,7 @@ class Square:
         for _ in range(self.position[1]):
             print()
 
-        # Imprime el cuadrado con espacios al inicio de cada línea (position[0])
+        # Imprime el cuadrado con espacios al inicio de cada línea position(0)
         for _ in range(self.size):
             print(" " * self.position[0] + "#" * self.size)
 
