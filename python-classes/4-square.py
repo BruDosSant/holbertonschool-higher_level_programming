@@ -12,7 +12,7 @@ class Square:
         """
         Inicializa el atributo size utilizando el setter.
         """
-        self.size(size)
+        self.size = size
 
     @property
     def size(self):
