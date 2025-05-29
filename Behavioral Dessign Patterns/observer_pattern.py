@@ -1,4 +1,4 @@
-# observer_pattern.py
+# Observer
 
 class Aldeano:
     def __init__(self, name):
@@ -7,7 +7,7 @@ class Aldeano:
     def alert(self, mensaje):
         print(f"[{self.name}] ¡Alerta! {mensaje}")
 
-
+# Sujeto
 class Volcan:
     def __init__(self):
         self._observers = []
