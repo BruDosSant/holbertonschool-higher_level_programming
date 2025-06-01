@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 4-inherits_from.py
-This module provides a function to check if an object is an instance of a 
+This module provides a function to check if an object is an instance of a
 specified class,
 or a subclass of that class, but not an instance of the class itself.
 It is useful for determining inheritance relationships in Python's
