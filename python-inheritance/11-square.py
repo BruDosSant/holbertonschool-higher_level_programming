@@ -3,7 +3,7 @@
 11-square.py
 This module defines a Square class that inherits from Rectangle.
 It implements the area method to calculate the area of the square.
-It validates the size as a positive integer and provides string representations.
+It validates the size as a positive integer and provides string representation
 """
 
 Rectangle = __import__('9-rectangle').Rectangle

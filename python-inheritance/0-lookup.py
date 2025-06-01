@@ -3,7 +3,8 @@
 0-lookup.py
 This module provides a function to retrieve the list of attributes and methods
 of an object.
-It is useful for introspection and understanding the capabilities of objects in Python.
+It is useful for introspection and understanding the capabilities of objects
+ in Python.
 """
 
 

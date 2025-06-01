@@ -1,14 +1,18 @@
 #!/usr/bin/python3
 """
 7-base_geometry.py
-This module defines a BaseGeometry class that serves as a base for other geometric classes.
-It includes methods for calculating the area and validating integer values.
-It raises exceptions for unimplemented methods and invalid values, ensuring that subclasses must provide their own implementations and adhere to specific constraints.
+This module defines a BaseGeometry class that serves as a base for
+other geometric classes.
+It includes methods for calculating the area and validating integer
+values.
+It raises exceptions for unimplemented methods and invalid values,
+ensuring that subclasses
+must provide their own implementations and adhere to specific constraints.
 """
 
 
 class BaseGeometry:
-    """Clase base para geometría con métodos para área y validación de int."""
+    """Clase base para geometría con métodos para área y validación de int"""
 
     def area(self):
         """Lanza una excepción indicando que el área no está implementada."""
