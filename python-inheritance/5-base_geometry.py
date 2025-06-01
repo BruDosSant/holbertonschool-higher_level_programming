@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-
-no se que poner es un cuadradinho
-
+5-base_geometry.py
+This module defines a BaseGeometry class that serves as a base for other geometric classes.
+It is intended to be extended by other classes that implement specific geometric functionalities.
 """
 
 

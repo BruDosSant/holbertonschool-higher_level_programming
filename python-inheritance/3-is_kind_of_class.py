@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-Función que devuelve True si el objeto es una instancia exacta de la
-clase especificada, de lo contrario, devuelve False.
+3-is_kind_of_class.py
+This module provides a function to check if an object is an instance of a specified class or its subclasses.
+It is useful for type checking and ensuring that an object conforms to a specific class hierarchy.
 """
 
 

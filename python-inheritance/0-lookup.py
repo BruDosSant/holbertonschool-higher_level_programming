@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-
-no se que poner es un cuadradinho
-
+0-lookup.py
+This module provides a function to retrieve the list of attributes and methods
+of an object.
+It is useful for introspection and understanding the capabilities of objects in Python.
 """
 
 
 def lookup(obj):
-    """Clase que define un rectángulo con ancho y alto."""
-
+    """ Returns a list of available attributes and methods of an object"""
     messi = dir(obj)
     return messi

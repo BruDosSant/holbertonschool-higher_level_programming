@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-
-no se que poner es un cuadradinho
-
+1-my_list.py
+Esta es una clase que extiende la clase list de Python.
 """
 
 

@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-
 """
-Class Square inherits from Rectangle.
-
-Usage:
-    You can create instances of Square and it will validate size.
+11-square.py
+This module defines a Square class that inherits from Rectangle.
+It implements the area method to calculate the area of the square.
+It validates the size as a positive integer and provides string representations.
 """
 
 Rectangle = __import__('9-rectangle').Rectangle

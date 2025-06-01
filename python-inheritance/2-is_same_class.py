@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Función que devuelve True si el objeto es una instancia exacta de la
-clase especificada, de lo contrario, devuelve False.
+2-is_same_class.py
 """
 
 

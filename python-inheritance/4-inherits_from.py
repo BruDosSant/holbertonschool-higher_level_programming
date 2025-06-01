@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-Función que devuelve True si el objeto es una instancia exacta de la
-clase especificada, de lo contrario, devuelve False.
+4-inherits_from.py
+This module provides a function to check if an object is an instance of a specified class,
+or a subclass of that class, but not an instance of the class itself.
+It is useful for determining inheritance relationships in Python's object-oriented programming.
 """
 
 

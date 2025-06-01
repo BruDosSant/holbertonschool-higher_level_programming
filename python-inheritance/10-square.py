@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-
 """
-retun true if is of that class
-
-Usage:
-You can create instances of Rectangle.
+10-square.py
+This module defines a Square class that inherits from Rectangle.
+It implements the area method to calculate the area of the square.
+It raises TypeError and ValueError for invalid size inputs.
 """
 Rectangle = __import__('9-rectangle').Rectangle
 

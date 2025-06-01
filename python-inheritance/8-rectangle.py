@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
-
-no se que poner es un cuadradinho
-
+8-rectangle.py
+This module defines a Rectangle class that inherits from BaseGeometry.
+It validates the width and height parameters and initializes them.
+The class is intended to represent a rectangle with specific dimensions.
+It is useful for creating rectangle objects with validation of dimensions.
 """
 
 
