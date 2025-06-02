@@ -1,56 +1,3 @@
-# State
-class EstadoVolcan:
-    def manejar(self, volcan):
-        raise NotImplementedError("Debes implementar el método manejar().")
-
-class EstadoDormido(EstadoVolcan):
-    def manejar(self, volcan):
-        print("😴 El volcán está dormido... todo está tranquilo.")
-
-class EstadoActivo(EstadoVolcan):
-    def manejar(self, volcan):
-        print("🌋 El volcán comienza a rugir y temblar... pero aún no entra en erupción.")
-
-class EstadoEnErupcion(EstadoVolcan):
-    def manejar(self, volcan):
-        print("💥 ¡El volcán entra en erupción!")
-        volcan._notificar_a_todos("¡El volcán está en erupción! ¡Corran!")
-
-# Strategy
-
-class EstrategiaEscape:
-    def ejecutar(self, nombre):
-        raise NotImplementedError("Debes implementar el método ejecutar().")
-
-class CorrerAlRio(EstrategiaEscape):
-    def ejecutar(self, nombre):
-        print(f"[{nombre}] corre hacia el río para ponerse a salvo.")
-
-class EsconderseEnCueva(EstrategiaEscape):
-    def ejecutar(self, nombre):
-        print(f"[{nombre}] se esconde en una cueva cercana.")
-
-class SalirVolando(EstrategiaEscape):
-    def ejecutar(self, nombre):
-        print(f"[{nombre}] se sube a un dragón y huye volando.")
-
-# Observers
-
-class Aldeano:
-    def __init__(self, nombre, estrategia):
-        self.nombre = nombre
-        self.estrategia = estrategia
-
-    def cambiar_estrategia(self, nueva_estrategia):
-        self.estrategia = nueva_estrategia
-
-    def alert(self, mensaje):
-        print(f"[{self.nombre}] ¡Alerta! {mensaje}")
-        self.escapar()
-
-    def escapar(self):
-        self.estrategia.ejecutar(self.nombre)
-
 # Objeto, sujeto Volcan
 
 class Volcan:
@@ -73,6 +20,59 @@ class Volcan:
     def _notificar_a_todos(self, mensaje):
         for observador in self._observadores:
             observador.alert(mensaje)
+
+# Observers
+
+class Aldeano:
+    def __init__(self, nombre, estrategia):
+        self.nombre = nombre
+        self.estrategia = estrategia
+
+    def cambiar_estrategia(self, nueva_estrategia):
+        self.estrategia = nueva_estrategia
+
+    def alert(self, mensaje):
+        print(f"[{self.nombre}] ¡Alerta! {mensaje}")
+        self.escapar()
+
+    def escapar(self):
+        self.estrategia.ejecutar(self.nombre)
+
+# Strategy
+
+class EstrategiaEscape:
+    def ejecutar(self, nombre):
+        raise NotImplementedError("Debes implementar el método ejecutar().")
+
+class CorrerAlRio(EstrategiaEscape):
+    def ejecutar(self, nombre):
+        print(f"[{nombre}] corre hacia el río para ponerse a salvo.")
+
+class EsconderseEnCueva(EstrategiaEscape):
+    def ejecutar(self, nombre):
+        print(f"[{nombre}] se esconde en una cueva cercana.")
+
+class SalirVolando(EstrategiaEscape):
+    def ejecutar(self, nombre):
+        print(f"[{nombre}] se sube a un dragón y huye volando.")
+
+# State
+class EstadoVolcan:
+    def manejar(self, volcan):
+        raise NotImplementedError("Debes implementar el método manejar().")
+
+class EstadoDormido(EstadoVolcan):
+    def manejar(self, volcan):
+        print("😴 El volcán está dormido... todo está tranquilo.")
+
+class EstadoActivo(EstadoVolcan):
+    def manejar(self, volcan):
+        print("🌋 El volcán comienza a rugir y temblar... pero aún no entra en erupción.")
+
+class EstadoEnErupcion(EstadoVolcan):
+    def manejar(self, volcan):
+        print("💥 ¡El volcán entra en erupción!")
+        volcan._notificar_a_todos("¡El volcán está en erupción! ¡Corran!")
 
 if __name__ == "__main__":
     # Instanciar el volcán
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     volcan.cambiar_estado(EstadoEnErupcion())
     volcan.activar()
 
-    print("\n🔁 [Messi cambia de estrategia a 'volar en dragón']\n")
+    print("\n🔁 [Messi cambia de estrategia a 'salir volando']\n")
     Messi.cambiar_estrategia(dragon)
 
     volcan.activar()
