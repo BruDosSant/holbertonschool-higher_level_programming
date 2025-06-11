@@ -11,5 +11,5 @@ def fetch_and_print_posts():
         for post in posts:
             print(post['title'])
 
-def fetch_and_save_posts()
+def fetch_and_save_posts():
     pass
