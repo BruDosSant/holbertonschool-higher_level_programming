@@ -1,4 +1,5 @@
--- a script to select all states from the database
+"""a script to select all states from the database"""
+
 import MySQLdb
 import sys
 
