@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""a script to filter states by name from the database"""
+"""
+Lists all states matching a name passed as argument
+from the database hbtn_0e_0_usa
+"""
 
 import sys
 import MySQLdb
@@ -19,10 +22,9 @@ if __name__ == "__main__":
     )
 
     cur = db.cursor()
-    cur.execute(
-        "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC",
-        (state_name,)
-    )
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    cur.execute(query)
+
     rows = cur.fetchall()
     for row in rows:
         print(row)
