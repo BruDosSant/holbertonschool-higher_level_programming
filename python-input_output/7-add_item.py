@@ -1,22 +1,21 @@
 #!/usr/bin/python3
-"""
-increible
-"""
-
+"""7-add_item.py"""
 
 import sys
-import os
-
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+from os.path import exists
+from save_to_json_file import save_to_json_file
+from load_from_json_file import load_from_json_file
 
 filename = "add_item.json"
 
-if os.path.exists(filename):
+# Intentar cargar el archivo si existe
+if exists(filename):
     items = load_from_json_file(filename)
 else:
     items = []
 
+# Agregar los nuevos argumentos
 items.extend(sys.argv[1:])
 
+# Guardar la lista actualizada
 save_to_json_file(items, filename)
