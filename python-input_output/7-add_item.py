@@ -7,20 +7,26 @@ then saves them to a JSON file
 
 
 import sys
+import json
 from os.path import exists
-from 5-save_to_json_file import save_to_json_file
-from 6-load_from_json_file import load_from_json_file
+
+# Copiar la función de 5-save_to_json_file.py
+def save_to_json_file(my_obj, filename):
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(my_obj, f)
+
+# Copiar la función de 6-load_from_json_file.py
+def load_from_json_file(filename):
+    with open(filename, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
 filename = "add_item.json"
 
-# Intentar cargar el archivo si existe
 if exists(filename):
     items = load_from_json_file(filename)
 else:
     items = []
 
-# Agregar los nuevos argumentos
 items.extend(sys.argv[1:])
 
-# Guardar la lista actualizada
 save_to_json_file(items, filename)
