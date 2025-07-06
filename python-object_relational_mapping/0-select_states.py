@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """a script to select all states from the database"""
 
 import MySQLdb
