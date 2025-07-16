@@ -1,13 +1,15 @@
-if (document.querySelector('header').getAttribute('class') != 'red' &&
-    document.querySelector('header').getAttribute('class') != 'green') {
-    document.querySelector('header').setAttribute('class', 'green');
+header = document.querySelector('header');
+if (header.classList.contains('red') == false && header.classList.contains('green') == false) {
+    header.classList.add('green');
 }
 
 document.querySelector('#toggle_header').addEventListener('click', function () {
-    if (document.querySelector('header').getAttribute('class') == 'green') {
-        document.querySelector('header').setAttribute('class', 'red');
+    if (header.classList.contains('red') == false) {
+        header.classList.remove('green');
+        header.classList.add('red');
     }
     else {
-        document.querySelector('header').setAttribute('class', 'green');
+        header.classList.remove('red');
+        header.classList.add('green');
     }
 });
